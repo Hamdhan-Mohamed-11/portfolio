@@ -1,0 +1,156 @@
+from pptx import Presentation
+from pptx.util import Inches
+
+# Create a presentation object
+prs = Presentation()
+
+# Title Slide
+slide = prs.slides.add_slide(prs.slide_layouts[0])
+title = slide.shapes.title
+subtitle = slide.placeholders[1]
+title.text = "Enhancing Business Processes and Decision-Making for Carnage"
+subtitle.text = "Utilizing Data Science Tools and Techniques\nPresented by: [Your Name], Business Support Executive\nDate"
+
+# Agenda Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Agenda"
+content = slide.placeholders[1].text = """1. Executive Summary
+2. Company Overview
+3. Objective
+4. Methodology
+5. Data Analysis
+6. Findings and Recommendations
+7. Implementation Plan
+8. Conclusion"""
+
+# Executive Summary Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Executive Summary"
+content = slide.placeholders[1].text = "Brief overview of the report’s purpose and key findings."
+
+# Company Overview Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Company Overview"
+content = slide.placeholders[1].text = """Carnage: A leading retail company in Sri Lanka.
+Operations: Multiple stores nationwide.
+Mission: To provide high-quality products and excellent customer service."""
+
+# Objective Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Objective"
+content = slide.placeholders[1].text = "Utilize data science tools to enhance business processes and decision-making.\nFocus on customer experience, sales and inventory optimization, and employee performance."
+
+# Methodology Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Methodology"
+content = slide.placeholders[1].text = """Data Collection: Surveys, interviews, sales data, inventory data, social media feedback.
+Data Analysis Tools: Python, Pandas, Scikit-learn, Tableau, SQL."""
+
+# Data Collection Process Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Data Collection Process"
+content = slide.placeholders[1].text = """Customer Surveys: [Placeholder data]
+Employee Interviews: [Placeholder data]
+Sales Data: [Placeholder data]
+Inventory Data: [Placeholder data]
+Social Media Feedback: [Placeholder data]"""
+
+# Data Analysis Techniques Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Data Analysis Techniques"
+content = slide.placeholders[1].text = """Customer Feedback Analysis: NLP for sentiment analysis.
+Sales and Inventory Analysis: Trend analysis and predictive modeling.
+Employee Performance Analysis: KPI identification and performance metrics."""
+
+# Customer Feedback Analysis Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Customer Feedback Analysis"
+content = slide.placeholders[1].text = """Findings: Common themes, sentiment scores, key areas for improvement.
+Example Data: "Customers prefer quicker checkout processes.""""
+
+# Sales and Inventory Analysis Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Sales and Inventory Analysis"
+content = slide.placeholders[1].text = """Findings: High-demand products, inventory turnover rates, sales trends.
+Example Data: "Peak sales periods identified; inventory optimization needed.""""
+
+# Employee Performance Analysis Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Employee Performance Analysis"
+content = slide.placeholders[1].text = """Findings: Key performance indicators, training needs.
+Example Data: "Training needed in customer service.""""
+
+# Recommendations - Customer Experience Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Recommendations - Customer Experience"
+content = slide.placeholders[1].text = """Enhance product quality and variety.
+Improve customer service training."""
+
+# Recommendations - Sales and Inventory Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Recommendations - Sales and Inventory"
+content = slide.placeholders[1].text = """Implement predictive inventory management.
+Optimize pricing strategies."""
+
+# Recommendations - Employee Development Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Recommendations - Employee Development"
+content = slide.placeholders[1].text = """Develop targeted training programs.
+Implement performance-based reward system."""
+
+# Implementation Plan Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Implementation Plan"
+content = slide.placeholders[1].text = """Phase 1: Data Collection and Cleaning
+Phase 2: Data Analysis and Model Development
+Phase 3: Visualization and Reporting
+Phase 4: Actionable Recommendations"""
+
+# Implementation Timeline Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Implementation Timeline"
+content = slide.placeholders[1].text = """Q1: Conduct surveys, interviews, and collect data.
+Q2: Analyze data and develop models.
+Q3: Create dashboards and compile report.
+Q4: Present findings and implement recommendations."""
+
+# Conclusion Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Conclusion"
+content = slide.placeholders[1].text = """Summary of key points.
+Expected impact on Carnage’s business processes and decision-making.
+Next steps."""
+
+# Q&A Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Q&A"
+content = slide.placeholders[1].text = "Open the floor for questions and discussions."
+
+# Thank You Slide
+slide = prs.slides.add_slide(prs.slide_layouts[1])
+title = slide.shapes.title
+title.text = "Thank You"
+content = slide.placeholders[1].text = "Contact information for further queries."
+
+# Save the presentation
+file_path = "/mnt/data/Carnage_Business_Report_Presentation.pptx"
+prs.save(file_path)
+
+file_path
